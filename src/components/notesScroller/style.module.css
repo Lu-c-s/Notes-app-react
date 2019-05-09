@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+.container {
+   background: white;
+   width: 35%;
+   height: 94.5vh;
+   overflow-y: scroll;
+}
+
+.listItem {
+   padding: 0 15px;
+}
