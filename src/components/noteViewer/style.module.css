@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.css';
 
 .container {
-    background: green;
+    background: lightgray;
     height: 94.5vh;
     width: 70%;
 }

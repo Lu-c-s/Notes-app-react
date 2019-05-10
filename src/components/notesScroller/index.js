@@ -7,14 +7,13 @@ import { List, Avatar } from 'antd';
 
 class notesScroller extends Component {
   render() {
-    console.log(styles)
     return (
       <div className={styles.container}>
         <List
           itemLayout="horizontal"
           dataSource={this.props.notes || []}
           renderItem={item => (
-            <div className={styles.listItemContainer}>
+             <div className={styles.listItemContainer} onClick={() => this.props.onClickNote(item)}>
               <List.Item>
                 <List.Item.Meta 
                   className={styles.listItem}
@@ -22,7 +21,7 @@ class notesScroller extends Component {
                   description={item.subtitle}               
                 />              
               </List.Item>
-            </div>
+             </div> 
     )}
   />
       </div>

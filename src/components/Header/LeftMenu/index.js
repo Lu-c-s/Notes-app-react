@@ -7,18 +7,19 @@ const MenuItemGroup = Menu.ItemGroup;
 
 export default class Header extends Component {
   render() {
+    console.log(this.props)
     return (
       <Menu mode="horizontal">
-        <Menu.Item key="mail">
+        <Menu.Item key="filter">
             <Search
-              placeholder="input search text"
-              onSearch={value => console.log(value)}
+              placeholder="Filter notes"
+              onSearch={value => this.props.onSearch(value)}
               style={{ width: 450, marginRight: '30px' }}
             />
         </Menu.Item>
         <Menu.Item>
           <div>
-            <Icon type="plus" />
+            <Icon type="plus" onClick={this.props.onAdd}/>
           </div>
         </Menu.Item>
          <Menu.Item key="info">
