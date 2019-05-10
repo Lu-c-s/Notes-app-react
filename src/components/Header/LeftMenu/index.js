@@ -13,11 +13,13 @@ export default class Header extends Component {
             <Search
               placeholder="input search text"
               onSearch={value => console.log(value)}
-              style={{ width: 400, marginRight: '30px' }}
+              style={{ width: 450, marginRight: '30px' }}
             />
         </Menu.Item>
         <Menu.Item>
-          <Icon type="plus" />
+          <div>
+            <Icon type="plus" />
+          </div>
         </Menu.Item>
          <Menu.Item key="info">
             <Icon type="info-circle" />

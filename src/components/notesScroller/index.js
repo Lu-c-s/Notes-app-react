@@ -3,57 +3,7 @@ import styles from './style.module.css'
 import Note from '../note'
 import { List, Avatar } from 'antd';
 
-const data = [
-  {
-    title: 'Ant Design Title 1',
-  },
-  {
-    title: 'Ant Design Title 2',
-  },
-  {
-    title: 'Ant Design Title 3',
-  },
-  {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-   {
-    title: 'Ant Design Title 4',
-  },
-  
-];
+
 
 class notesScroller extends Component {
   render() {
@@ -62,15 +12,17 @@ class notesScroller extends Component {
       <div className={styles.container}>
         <List
           itemLayout="horizontal"
-          dataSource={data}
+          dataSource={this.props.notes || []}
           renderItem={item => (
-            <List.Item>
-              <List.Item.Meta 
-                className={styles.listItem}
-                title={<a href="https://ant.design">{item.title}</a>}
-                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-              />
-      </List.Item>
+            <div className={styles.listItemContainer}>
+              <List.Item>
+                <List.Item.Meta 
+                  className={styles.listItem}
+                  title={<p>{item.title}</p>}
+                  description={item.subtitle}               
+                />              
+              </List.Item>
+            </div>
     )}
   />
       </div>

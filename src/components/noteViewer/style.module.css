@@ -5,3 +5,9 @@
     height: 94.5vh;
     width: 70%;
 }
+
+@media(max-width: 767px){
+    .container{
+        width: 100%;
+    }
+  }

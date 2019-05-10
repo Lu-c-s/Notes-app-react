@@ -79,6 +79,10 @@
   border-bottom-color: transparent;
 }
 
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+  margin: 0 10px;
+}
+
 @media(max-width: 767px){
   .barsMenu{
     display: inline-block;
